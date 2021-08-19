@@ -65,7 +65,6 @@ export default {
     onDestroyed() {
       this.$emit("onDestroyed", this.metrics);
     },
-
     setEnded(status) {
       this.metrics.ended = status;
     },
@@ -99,13 +98,6 @@ export default {
       this.metrics.playedTimes = 0;
       this.metrics.volumeChanged = 0;
     },
-    // videoProgress(e) {
-    //   // console.log(e)
-    //   console.log(this.$refs.videoRef.played)
-    // },
-    // videoAbort(e) {
-    //   console.log(e)
-    // },
   },
 };
 </script>
