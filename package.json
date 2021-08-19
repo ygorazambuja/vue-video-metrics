@@ -2,6 +2,14 @@
   "name": "vue-video-metrics",
   "version": "1.0.0",
   "description": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ygorazambuja/vue-video-metrics"
+  },
+  "author": {
+    "name": "Ygor Azambuja",
+    "email": "ygorazambuja@gmail.com"
+  },
   "main": "dist/vue-video-metrics.ssr.js",
   "browser": "dist/vue-video-metrics.esm.js",
   "module": "dist/vue-video-metrics.esm.js",
