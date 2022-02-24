@@ -71,21 +71,24 @@ export default {
     onTimeUpdated(e) {
       this.metrics.secondsWatched += 0.24;
       this.setEnded(e.target.ended);
+      this.$emit("onTimeUpdated", this.metrics);
     },
     onPause() {
       this.metrics.pausedTimes = this.metrics.pausedTimes + 1;
+      this.$emit("onPause", this.metrics);
     },
     onPlay(e) {
       this.metrics.videoDuration = this.$refs.videoRef.duration;
       this.metrics.playedTimes = this.metrics.playedTimes + 1;
+      this.$emit("onPlay", this.metrics);
     },
     onEnded() {
       this.setEnded(true);
       this.$emit("onEnded", this.metrics);
-      // this.resetMetrics()
     },
     onVolumeChanged() {
       this.metrics.volumeChanged = this.metrics.volumeChanged + 1;
+      this.$emit('onVolumeChanged', this.metrics);
     },
     onError(e) {
       throw new Error(e);
