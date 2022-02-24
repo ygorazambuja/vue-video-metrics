@@ -24,6 +24,7 @@ npm install vue-video-metrics
     :src="require('@/assets/video.mp4')"
     @onDestroyed="handleDestroy"
     @onEnded="handleEnded"
+    @onPlay="onPlay"
   />
 </template>
 
@@ -32,11 +33,14 @@ import VideoMetrics from "vue-video-metrics";
 export default {
   components: { VideoMetrics },
   methods: {
-    handleDestroy(e) {
-      console.log(e);
+    onPlay(metrics) {
+      console.log(metrics);
     },
-    handleEnded(e) {
-      console.log(e);
+    handleDestroy(metrics) {
+      console.log(metrics);
+    },
+    handleEnded(metrics) {
+      console.log(metrics);
     },
   },
 };
